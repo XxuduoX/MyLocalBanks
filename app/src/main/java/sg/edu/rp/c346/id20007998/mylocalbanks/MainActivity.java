@@ -89,6 +89,12 @@ public class MainActivity extends AppCompatActivity {
                 Intent intentCall=new Intent(Intent.ACTION_DIAL, Uri.parse("tel: "+18001111111l));
                 startActivity(intentCall);
 
+            }else if(id==R.id.FavouriteSelection){
+                if (tvDBS.getCurrentTextColor()!=getResources().getColor(android.R.color.holo_red_dark)){
+                    tvDBS.setTextColor(getResources().getColor(android.R.color.holo_red_dark));
+                }else{
+                    tvDBS.setTextColor(getResources().getColor(android.R.color.black));
+                }
             }
         }else if(worldClicked.equalsIgnoreCase("2nd")){
             if(id==R.id.WebsiteSelection){
@@ -98,6 +104,13 @@ public class MainActivity extends AppCompatActivity {
             }else if(id==R.id.ContactSelection){
                 Intent intentCall=new Intent(Intent.ACTION_DIAL, Uri.parse("tel: "+18003633333l));
                 startActivity(intentCall);
+
+            }else if(id==R.id.FavouriteSelection){
+                if (tvOCBC.getCurrentTextColor()!=getResources().getColor(android.R.color.holo_red_dark)){
+                    tvOCBC.setTextColor(getResources().getColor(android.R.color.holo_red_dark));
+                }else{
+                    tvOCBC.setTextColor(getResources().getColor(android.R.color.black));
+                }
 
             }
         }else if(worldClicked.equalsIgnoreCase("3rd")){
@@ -109,6 +122,12 @@ public class MainActivity extends AppCompatActivity {
                 Intent intentCall=new Intent(Intent.ACTION_DIAL, Uri.parse("tel: "+18002222121l));
                 startActivity(intentCall);
 
+            }else if(id==R.id.FavouriteSelection){
+                if (tvUOB.getCurrentTextColor()!=getResources().getColor(android.R.color.holo_red_dark)){
+                    tvUOB.setTextColor(getResources().getColor(android.R.color.holo_red_dark));
+                }else{
+                    tvUOB.setTextColor(getResources().getColor(android.R.color.black));
+                }
             }
         }
         return super.onContextItemSelected(item);
