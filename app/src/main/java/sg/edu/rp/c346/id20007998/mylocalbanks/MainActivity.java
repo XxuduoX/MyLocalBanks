@@ -43,19 +43,19 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.EnglishSelection) {
-            tvDBS.setText("DBS");
-            tvOCBC.setText("OCBC");
-            tvUOB.setText("UOB");
+            tvDBS.setText(getString(R.string.dbs));
+            tvOCBC.setText(getString(R.string.ocbc));
+            tvUOB.setText(getString(R.string.uob));
             return true;
         } else if (id == R.id.ChineseSelection) {
-            tvDBS.setText("星展银行");
-            tvOCBC.setText("华侨银行");
-            tvUOB.setText("大华银行");
+            tvDBS.setText(getString(R.string.c_dbs));
+            tvOCBC.setText(getString(R.string.c_ocbc));
+            tvUOB.setText(getString(R.string.c_uob));
             return true;
         } else {
-            tvDBS.setText("Error translation");
-            tvOCBC.setText("Error translation");
-            tvUOB.setText("Error translation");
+            tvDBS.setText(getString(R.string.error_translation));
+            tvOCBC.setText(getString(R.string.error_translation));
+            tvUOB.setText(getString(R.string.error_translation));
         }
 
         return super.onOptionsItemSelected(item);
@@ -81,12 +81,12 @@ public class MainActivity extends AppCompatActivity {
         int id=item.getItemId();
         if(worldClicked.equalsIgnoreCase("1st")){
             if(id==R.id.WebsiteSelection){
-                Intent intent = new Intent(Intent. ACTION_VIEW, Uri.parse("https://www.dbs.com.sg"));
+                Intent intent = new Intent(Intent. ACTION_VIEW, Uri.parse(getString(R.string.urlDBS)));
                 startActivity(intent);
 
 
             }else if(id==R.id.ContactSelection){
-                Intent intentCall=new Intent(Intent.ACTION_DIAL, Uri.parse("tel: "+18001111111l));
+                Intent intentCall=new Intent(Intent.ACTION_DIAL, Uri.parse("tel: "+getString(R.string.telDBS)));
                 startActivity(intentCall);
 
             }else if(id==R.id.FavouriteSelection){
@@ -98,11 +98,11 @@ public class MainActivity extends AppCompatActivity {
             }
         }else if(worldClicked.equalsIgnoreCase("2nd")){
             if(id==R.id.WebsiteSelection){
-                Intent intent = new Intent(Intent. ACTION_VIEW, Uri.parse("https://www.ocbc.com"));
+                Intent intent = new Intent(Intent. ACTION_VIEW, Uri.parse(getString(R.string.urlOCBC)));
                 startActivity(intent);
 
             }else if(id==R.id.ContactSelection){
-                Intent intentCall=new Intent(Intent.ACTION_DIAL, Uri.parse("tel: "+18003633333l));
+                Intent intentCall=new Intent(Intent.ACTION_DIAL, Uri.parse("tel: "+getString(R.string.telOCBC)));
                 startActivity(intentCall);
 
             }else if(id==R.id.FavouriteSelection){
@@ -115,11 +115,11 @@ public class MainActivity extends AppCompatActivity {
             }
         }else if(worldClicked.equalsIgnoreCase("3rd")){
             if(id==R.id.WebsiteSelection){
-                Intent intent = new Intent(Intent. ACTION_VIEW, Uri.parse("https://www.uob.com.sg"));
+                Intent intent = new Intent(Intent. ACTION_VIEW, Uri.parse(getString(R.string.urlUOB)));
                 startActivity(intent);
 
             }else if(id==R.id.ContactSelection){
-                Intent intentCall=new Intent(Intent.ACTION_DIAL, Uri.parse("tel: "+18002222121l));
+                Intent intentCall=new Intent(Intent.ACTION_DIAL, Uri.parse("tel: "+getString(R.string.telUOB)));
                 startActivity(intentCall);
 
             }else if(id==R.id.FavouriteSelection){
